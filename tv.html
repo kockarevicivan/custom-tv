@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			html, body {
+				height: 100%;
+			}
+			
+			body {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: black;
+				overflow: hidden;
+			}
+			
+			video {
+				width: 100%;
+				height: 100%;
+				outline: none;
+				object-fit: contain;
+			}
+			
+			video::-webkit-media-controls-fullscreen-button
+			{
+				display: none !important;
+			}
+			
+			.channel-icon {
+				position: fixed;
+				top: 20px;
+				right: 20px;
+				width: 90px;
+				opacity: 0.8;
+			}
+		</style>
+	</head>
+	<body>
+		<img class="channel-icon" src="https://explore.wimhofmethod.com/wp-content/uploads/wim-hof-hexagon-logo-2020.png" />
+		
+		<video muted autoplay controls autofocus >
+			<source src="file:///C:/Users/... .mp4" type="video/mp4" >
+		</video>
+		
+		<script>
+			const configuration = {
+				channels: [
+					{
+						id: 1,
+						name: "Wim Hof",
+						icon: "https://explore.wimhofmethod.com/wp-content/uploads/wim-hof-hexagon-logo-2020.png",
+						folders: [
+							"C://videos/wim"
+						]
+					}
+				]
+			};
+			
+			const channelInfo = {
+				videos: [
+					
+				]
+			};
+			
+			const session = {
+				channels: [
+					{
+						id: 1,
+						video: "",
+						stoppedAt: 30
+					}
+				]
+			};
+		
+			const video = document.querySelector("video");
+
+			//video.muted = false;
+			video.currentTime = 30;
+		</script>
+	</body>
+</html>
